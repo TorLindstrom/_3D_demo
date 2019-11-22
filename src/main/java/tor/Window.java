@@ -10,7 +10,7 @@ public class Window extends JFrame
 {
 
     public static final int width = 1000, height = 600;
-    public static final double verticalFOV = 90, horizontalFOV = 120;
+    public static final double verticalFOV = 70, horizontalFOV = 120;
 
     public Window(){
         int[] corner1 = makeRelative(800, -250, 0);

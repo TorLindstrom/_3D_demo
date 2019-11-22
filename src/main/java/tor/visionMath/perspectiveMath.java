@@ -7,8 +7,8 @@ public class perspectiveMath
 {
     public static int[] makeRelative(double x, double y, double z){
         int[] screenPos = new int[2];
-        double horizontalPlaneAngle = Math.atan(Math.abs(y) / x);
-        double verticalPlaneAngle = Math.atan(Math.abs(z) / calculatePaneDistance(x, y));
+        double horizontalPlaneAngle = (Math.atan(Math.abs(y) / x) * (180 / PI));
+        double verticalPlaneAngle = (Math.atan(Math.abs(z) / calculatePaneDistance(x, y)) * (180 / PI));
         if (y > 0){
             screenPos[0] = (int) (((horizontalFOV / 2 + horizontalPlaneAngle) / horizontalFOV) * (width)); //pixels from the left
         } else if (y < 0){
