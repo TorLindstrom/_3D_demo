@@ -3,7 +3,7 @@ package tor.visionMath;
 import tor.spaceObjects.Camera;
 
 import static java.lang.Math.*;
-import static tor.Window.*;
+import static tor.rendering.Window.*;
 
 public class PerspectiveMath
 {

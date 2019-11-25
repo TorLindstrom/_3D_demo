@@ -1,8 +1,8 @@
 package tor;
 
+import tor.rendering.Window;
 import tor.spaceObjects.Camera;
 
-import java.util.Calendar;
 import java.util.Scanner;
 
 public class App
@@ -34,14 +34,14 @@ public class App
                 Thread.sleep(100);
             }
 
-            for (int i = 0; i < 40; i++) {
+            for (int i = 0; i < 50; i++) {
                 camera.setX(camera.getX() - 5);
                 camera.setVerticalAngle(camera.getVerticalAngle() + 1);
                 window.refresh();
                 Thread.sleep(100);
             }
 
-            for (int i = 0; i < 40; i++) {
+            for (int i = 0; i < 50; i++) {
                 camera.setX(camera.getX() + 5);
                 camera.setVerticalAngle(camera.getVerticalAngle() - 1);
                 window.refresh();

@@ -1,4 +1,4 @@
-package tor;
+package tor.rendering;
 
 import tor.spaceObjects.Camera;
 import tor.spaceObjects.Pane3D;
