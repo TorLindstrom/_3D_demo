@@ -1,4 +1,4 @@
-package tor;
+package tor.spaceObjects;
 
 import javax.swing.*;
 import java.awt.*;

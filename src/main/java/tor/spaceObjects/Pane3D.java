@@ -1,4 +1,4 @@
-package tor;
+package tor.spaceObjects;
 
 import java.awt.*;
 
@@ -34,4 +34,14 @@ public class Pane3D extends Shapes
      public Color getColorValues(){
         return new Color(colorValues[0], colorValues[1],colorValues[2]);
      }
+
+    public int[] getX()
+    {
+        return x;
+    }
+
+    public int[] getY()
+    {
+        return y;
+    }
 }

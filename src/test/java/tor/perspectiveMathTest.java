@@ -1,9 +1,6 @@
 package tor;
 
 import org.junit.*;
-import tor.visionMath.perspectiveMath.*;
-
-import static org.junit.Assert.*;
 
 public class perspectiveMathTest
 {
