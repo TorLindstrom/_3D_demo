@@ -1,6 +1,7 @@
 package tor.visionMath;
 
 import tor.spaceObjects.Camera;
+import tor.spaceObjects.lights.LightSource;
 
 import static java.lang.Math.*;
 import static tor.rendering.Window.*;
@@ -37,8 +38,21 @@ public class PerspectiveMath
         int[] screenPos = new int[2];
         double horizontalPlaneAngle = (Math.atan(relativeY / relativeX) * (180 / PI)) - camera.getHorizontalAngle();
         double verticalPlaneAngle = (Math.atan(relativeZ / calculatePaneDistance(relativeX, relativeY)) * (180 / PI)) - camera.getVerticalAngle();
-        screenPos[0] = (int) (((camera.getHorizontalFOV() / 2 + horizontalPlaneAngle) / camera.getHorizontalFOV()) * (width)); //pixels from the left
-        screenPos[1] = (int) (height - (((camera.getVerticalFOV() / 2 + verticalPlaneAngle) / camera.getVerticalFOV()) * (height)));
+        screenPos[0] = (int) (((camera.getHorizontalFOV() / 2 + horizontalPlaneAngle) / camera.getHorizontalFOV()) * (width) + 0.5); //pixels from the left
+        screenPos[1] = (int) (height - (((camera.getVerticalFOV() / 2 + verticalPlaneAngle) / camera.getVerticalFOV()) * (height)) + 0.5);
+        return screenPos;
+    }
+
+    public static int[] makeRelative(double[] pos, Camera camera)
+    {
+        double relativeX = pos[0] - camera.getX();
+        double relativeY = pos[1] - camera.getY();
+        double relativeZ = pos[2] - camera.getZ();
+        int[] screenPos = new int[2];
+        double horizontalPlaneAngle = (Math.atan(relativeY / relativeX) * (180 / PI)) - camera.getHorizontalAngle();
+        double verticalPlaneAngle = (Math.atan(relativeZ / calculatePaneDistance(relativeX, relativeY)) * (180 / PI)) - camera.getVerticalAngle();
+        screenPos[0] = (int) (((camera.getHorizontalFOV() / 2 + horizontalPlaneAngle) / camera.getHorizontalFOV()) * (width) + 0.5); //pixels from the left
+        screenPos[1] = (int) (height - (((camera.getVerticalFOV() / 2 + verticalPlaneAngle) / camera.getVerticalFOV()) * (height)) + 0.5);
         return screenPos;
     }
 
@@ -57,4 +71,13 @@ public class PerspectiveMath
     {
         return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
     }
+
+    public static double calculateSpaceDistance(double x, double y, double z, double x2, double y2, double z2){
+        return sqrt(pow(x - x2, 2) + pow(y - y2, 2) + pow(z - z2, 2));
+    }
+
+    public static double calculateSpaceDistance(double[] pos1, double[] pos2){
+        return sqrt(pow(pos1[0] - pos2[0], 2) + pow(pos1[1] - pos2[1], 2) + pow(pos1[2] - pos2[2], 2));
+    }
+
 }

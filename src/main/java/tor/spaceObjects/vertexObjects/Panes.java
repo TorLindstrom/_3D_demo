@@ -1,9 +1,9 @@
-package tor.spaceObjects.pointObjects;
+package tor.spaceObjects.vertexObjects;
 
 public class Panes
 {
-    Vertices[] corners;
-    double[] center;
+    public Vertices[] corners;
+    public double[] center;
 
     public Panes(Vertices...corners){
         this.corners = corners;

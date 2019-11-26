@@ -1,4 +1,4 @@
-package tor.spaceObjects.pointObjects;
+package tor.spaceObjects.vertexObjects;
 
 import java.awt.*;
 
@@ -6,8 +6,16 @@ public class Box
 {
     final Vertices[][] sides = new Vertices[6][4];
     Color[] sideColors = new Color[6];
+    private int length, width, height;
+    private int[] pos;
 
     public Box(int length, int width, int height, int[] pos){
+        this.length = length;
+        this.width = width;
+        this.height = height;
+
+        this.pos = pos;
+
         sides[0][0] = new Vertices(pos[0], pos[1], pos[2]);
         sides[0][1] = new Vertices(length + pos[0], pos[1], pos[2]);
         sides[0][2] = new Vertices(length + pos[0], pos[1], height + pos[2]);
@@ -60,5 +68,25 @@ public class Box
 
     public void setColor(int side, Color color){
         sideColors[side] = color;
+    }
+
+    public int getLength()
+    {
+        return length;
+    }
+
+    public int getWidth()
+    {
+        return width;
+    }
+
+    public int getHeight()
+    {
+        return height;
+    }
+
+    public int[] getPos()
+    {
+        return pos;
     }
 }

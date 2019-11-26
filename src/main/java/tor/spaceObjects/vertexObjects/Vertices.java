@@ -1,4 +1,4 @@
-package tor.spaceObjects.pointObjects;
+package tor.spaceObjects.vertexObjects;
 
 import tor.spaceObjects.Points;
 

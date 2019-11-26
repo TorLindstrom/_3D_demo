@@ -12,6 +12,10 @@ public abstract class Points
         this.z = z;
     }
 
+    public double[] getPos(){
+        return new double[]{x, y, z};
+    }
+
     public int getX()
     {
         return x;
