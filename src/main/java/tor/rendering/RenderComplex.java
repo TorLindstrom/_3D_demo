@@ -31,13 +31,12 @@ public class RenderComplex extends JPanel
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.setColor(Color.GRAY);
+        PerspectiveMath.calculatePinholePos(camera);
         g.fillRect(0, PerspectiveMath.setHorizonLevel(camera), PracticeWindow.width, PracticeWindow.height);
         Graphics2D g2 = (Graphics2D) g;
         g2.setColor(Color.PINK);
-        Color lastPink = Color.PINK;
         Color lineColor = Color.BLACK;
         Color baseColor = Color.ORANGE;
-        int colorSwitch = 0;
         for (ComplexSide side: renderedShapes) {
             for (Panes[] paneRow : side.complexSide) {
                 for (Panes pane : paneRow) {
@@ -63,7 +62,6 @@ public class RenderComplex extends JPanel
                     }
                 }
             }
-            lastPink = Color.GREEN;
         }
     }
 }

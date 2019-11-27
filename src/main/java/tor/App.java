@@ -12,12 +12,50 @@ public class App
 {
     public static void main(String[] args) throws InterruptedException
     {
-        /*Camera camera = new Camera(0, 0, 0, 120, 90);
-        Window window = new Window(camera);*/
-
-        Camera camera = new Camera(-100, -50, 180, 0, 0, 200, 160);
+        Camera camera = new Camera(-200, 0, 100, 140, 100, 200., 100.);
         PracticeScene practiceScene = new PracticeScene();
         Window window = new Window(camera, practiceScene.light, practiceScene.thePane, practiceScene.thePane2);
+
+        /*while (true){
+            Scanner scan = new Scanner(System.in);
+            scan.nextLine();
+
+            for (int i = 0; i < 20; i++) {
+                camera.setDepthOfField(camera.getDepthOfField() + 5);
+                window.refresh();
+                Thread.sleep(70);
+            }
+            for (int i = 0; i < 20; i++) {
+                camera.setDepthOfField(camera.getDepthOfField() - 5);
+                window.refresh();
+                Thread.sleep(70);
+            }
+            scan.nextLine();
+
+            for (int i = 0; i < 20; i++) {
+                camera.setHorizontalFOV(camera.getHorizontalFOV() + 1);
+                window.refresh();
+                Thread.sleep(70);
+            }
+            for (int i = 0; i < 20; i++) {
+                camera.setHorizontalFOV(camera.getHorizontalFOV() - 1);
+                window.refresh();
+                Thread.sleep(70);
+            }
+            scan.nextLine();
+
+            for (int i = 0; i < 20; i++) {
+                camera.setVerticalFOV(camera.getVerticalFOV() + 1);
+                window.refresh();
+                Thread.sleep(70);
+            }
+            for (int i = 0; i < 20; i++) {
+                camera.setVerticalFOV(camera.getVerticalFOV() - 1);
+                window.refresh();
+                Thread.sleep(70);
+            }
+            scan.nextLine();
+        }*/
 
         while (true) {
             Scanner scanner = new Scanner(System.in);
@@ -41,26 +79,26 @@ public class App
                 camera.setX(camera.getX() - 1);
                 camera.setVerticalAngle(camera.getVerticalAngle() + 1);
                 window.refresh();
-                Thread.sleep(30);
+                Thread.sleep(50);
             }
 
             for (int i = 0; i < 100; i++) {
                 camera.setX(camera.getX() + 1);
                 camera.setVerticalAngle(camera.getVerticalAngle() - 1);
                 window.refresh();
-                Thread.sleep(30);
+                Thread.sleep(50);
             }
 
             for (int i = 0; i < 100; i++) {
                 camera.setHorizontalAngle(camera.getHorizontalAngle() - 1);
                 window.refresh();
-                Thread.sleep(30);
+                Thread.sleep(50);
             }
 
             for (int i = 0; i < 100; i++) {
                 camera.setHorizontalAngle(camera.getHorizontalAngle() + 1);
                 window.refresh();
-                Thread.sleep(30);
+                Thread.sleep(50);
             }
         }
     }
