@@ -1,6 +1,6 @@
 package tor.behindTheScenes.spaceObjects;
 
-public abstract class Points
+public class Points
 {
     int x;
     int y;

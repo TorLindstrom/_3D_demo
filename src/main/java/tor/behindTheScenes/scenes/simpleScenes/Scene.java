@@ -27,7 +27,7 @@ public class Scene
 
     public void addSimpleObject(SimpleObject simpleObject){
         simpleObjects.add(simpleObject);
-        complexScene.
+        complexScene.addComplexObject(simpleObject);
     }
 
 }

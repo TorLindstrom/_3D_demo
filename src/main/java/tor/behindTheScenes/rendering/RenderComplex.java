@@ -1,7 +1,6 @@
 package tor.behindTheScenes.rendering;
 
 import tor.behindTheScenes.spaceObjects.Camera;
-import tor.behindTheScenes.spaceObjects.Pane3D;
 import tor.behindTheScenes.spaceObjects.complexObjects.ComplexSide;
 import tor.behindTheScenes.spaceObjects.lights.LightSource;
 import tor.behindTheScenes.spaceObjects.vertexObjects.Panes;
@@ -31,7 +30,6 @@ public class RenderComplex extends JPanel
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.setColor(Color.GRAY);
-        PerspectiveMath.calculatePinholePos(camera);
         g.fillRect(0, PerspectiveMath.setHorizonLevel(camera), PracticeWindow.width, PracticeWindow.height);
         Graphics2D g2 = (Graphics2D) g;
         g2.setColor(Color.PINK);
