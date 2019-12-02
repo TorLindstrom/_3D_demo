@@ -40,7 +40,7 @@ public class RenderComplex extends JPanel
                 for (Panes pane : paneRow) {
                     int[] centerPos = makeRelative(pane.center, camera);
                     double distanceToLight = calculateSpaceDistance(pane.center, lightSource.getPos());
-                    if (centerPos[1] > -50 && centerPos[1] < Window.height + 50 && centerPos[0] > -50 && centerPos[0] < Window.width + 50) {
+                    if (centerPos[1] > -40 && centerPos[1] < Window.height + 40 && centerPos[0] > -40 && centerPos[0] < Window.width + 40) {
                         int[] x = new int[4];
                         int[] y = new int[4];
                         int i = 0;
@@ -56,7 +56,7 @@ public class RenderComplex extends JPanel
                         g2.setColor(shadedColor);
                         g2.fillPolygon(x, y, x.length);
                         g2.setColor(lineColor);
-                        g2.drawPolygon(x, y, x.length);
+                        //g2.drawPolygon(x, y, x.length);
                     }
                 }
             }

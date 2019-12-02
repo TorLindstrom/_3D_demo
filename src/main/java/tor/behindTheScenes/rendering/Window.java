@@ -9,7 +9,7 @@ import javax.swing.*;
 public class Window extends JFrame
 {
     public static final int width = 1500, height = 900;
-    public static final double verticalFOV = 100, horizontalFOV = 140;
+    //public static final double verticalFOV = 100, horizontalFOV = 140;
     public Camera camera;
     public ComplexSide[] sides;
     public ComplexSide complexSide;

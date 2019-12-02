@@ -13,7 +13,7 @@ public class UserEditing
 {
     public static void setup() throws InterruptedException
     {
-        Camera camera = new Camera(-100, 0, 100, 5, -5, 150., 70.);
+        Camera camera = new Camera(-100, 0, 100, 0, 0, 110., 90.);
         PracticeScene practiceScene = new PracticeScene();
         Window window = new Window(camera, practiceScene.light, practiceScene.thePane, practiceScene.thePane2);
 
@@ -76,30 +76,30 @@ public class UserEditing
                 Thread.sleep(30);
             }
 
-            for (int i = 0; i < 50; i++) {
+            for (int i = 0; i < 60; i++) {
                 camera.setX(camera.getX() - 1);
                 camera.setVerticalAngle(camera.getVerticalAngle() + 1);
                 window.refresh();
-                Thread.sleep(50);
+                Thread.sleep(60);
             }
 
-            for (int i = 0; i < 50; i++) {
+            for (int i = 0; i < 60; i++) {
                 camera.setX(camera.getX() + 1);
                 camera.setVerticalAngle(camera.getVerticalAngle() - 1);
                 window.refresh();
-                Thread.sleep(50);
+                Thread.sleep(60);
             }
 
             for (int i = 0; i < 40; i++) {
                 camera.setHorizontalAngle(camera.getHorizontalAngle() - 1);
                 window.refresh();
-                Thread.sleep(50);
+                Thread.sleep(60);
             }
 
             for (int i = 0; i < 40; i++) {
                 camera.setHorizontalAngle(camera.getHorizontalAngle() + 1);
                 window.refresh();
-                Thread.sleep(50);
+                Thread.sleep(60);
             }
         }
 
