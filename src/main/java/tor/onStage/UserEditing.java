@@ -13,7 +13,7 @@ public class UserEditing
 {
     public static void setup() throws InterruptedException
     {
-        Camera camera = new Camera(-100, 0, 100, 0, 0, 110., 90.);
+        Camera camera = new Camera(-100, 0, 100, 0, 0, 100., 80.);
         PracticeScene practiceScene = new PracticeScene();
         Window window = new Window(camera, practiceScene.light, practiceScene.thePane, practiceScene.thePane2);
 
