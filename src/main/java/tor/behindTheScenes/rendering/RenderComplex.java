@@ -40,7 +40,7 @@ public class RenderComplex extends JPanel
                 for (Panes pane : paneRow) {
                     int[] centerPos = makeRelative(pane.center, camera);
                     double distanceToLight = calculateSpaceDistance(pane.center, lightSource.getPos());
-                    if (centerPos[1] > -30 && centerPos[1] < Window.height + 30 && centerPos[0] > -30 && centerPos[0] < Window.width + 30) {
+                    if (centerPos[1] > -50 && centerPos[1] < Window.height + 50 && centerPos[0] > -50 && centerPos[0] < Window.width + 50) {
                         int[] x = new int[4];
                         int[] y = new int[4];
                         int i = 0;

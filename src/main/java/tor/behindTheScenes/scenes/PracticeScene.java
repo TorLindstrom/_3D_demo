@@ -8,7 +8,7 @@ import static tor.behindTheScenes.visionMath.PerspectiveMath.makeRelative;
 
 public class PracticeScene
 {
-    public ComplexSide thePane = ComplexSide.createYZSide(200, 10000, new int[]{350,-100,0});
+    public ComplexSide thePane = ComplexSide.createYZSide(200, 10000, new int[]{350,-50,0});
     public ComplexSide thePane2 = ComplexSide.createYZSide(600, 300, new int[]{150,-200,0});
 
     public LightSource light = new LightSource(0, 0, 180, 100);
