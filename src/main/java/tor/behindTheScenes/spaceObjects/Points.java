@@ -12,6 +12,12 @@ public class Points
         this.z = z;
     }
 
+    public Points(double x, double y, double z){
+        this.x = (int) x;
+        this.y = (int) y;
+        this.z = (int) z;
+    }
+
     public double[] getPos(){
         return new double[]{x, y, z};
     }

@@ -110,6 +110,11 @@ public class PerspectiveMath
         return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
 
+    public static double calculatePaneDistance(double x, double y, double x2, double y2)
+    {
+        return Math.sqrt(Math.pow(x - x2, 2) + Math.pow(y - y2, 2));
+    }
+
     public static double calculateSpaceDistance(double x, double y, double z)
     {
         return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
